@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ETS Smart Quiz</title>
+    <link href="https://fonts.googleapis.com/css2?family=Codystar:wght@300;400&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/party-js@latest/bundle/party.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/confetti-js@0.0.18/dist/index.min.js"></script>
+</head>
+<body>
+    <img src="ets_logo-removebg-preview.png" alt="ETS logo" class="logo">
+    <div class="container" id="start-screen">
+        <img src="quiz logo.png" alt="quiz" class="quizLogo">
+        <h1>Welcome to ETS Smart Quiz</h1>
+        <p>Test your knowledge with our 5-question quiz. <br>Good Luck!</p>
+        <button id="startBtn" onclick="startQuiz()">Start Quiz</button>
+    </div>
+    
+    <div id="quiz-container" class="container" style="display: none;">
+        <div class="progress-score-wrapper">
+            <div class="progress-bar">
+                <div id="progress" class="progress-fill"></div>
+            </div>
+            <div id="score-text">Score: 0/5</div>
+            <div id="timer"></div>
+        </div>
+        
+        <div id="question-counter"></div>
+        <h2 id="question-text"></h2>
+        
+        <div id="options"></div>
+        
+        <button id="submit-btn" onclick="submitAnswer()">Submit</button>
+    </div>
+    
+    <div id="result-container" class="container" style="display: none;">
+        <h2 id="result-text"></h2>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
